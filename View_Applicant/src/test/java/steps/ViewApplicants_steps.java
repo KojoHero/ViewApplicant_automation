@@ -44,29 +44,39 @@ public class ViewApplicants_steps {
 	public void user_clicks_on_view_applicants_employer() throws Throwable {
 		Thread.sleep(5000);
 		// click on job dropdown
-		driver.findElement(By.id("")).click();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[1]/div/div/div[2]/div[2]/a/span")).click();
 		
 		Thread.sleep(3000);
 		// click on view job from dropdown
-		driver.findElement(By.id("")).click();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[1]/div/div/div[2]/div[2]/div/a[3]")).click();
 	}
 
 	@Then("^user should be able to filter \\(employer\\)$")
 	public void user_should_be_able_to_filter_employer() throws Throwable {
-		// filter Type
+		// filter by Type
 		Thread.sleep(3000);
-		Select type = new Select(driver.findElement(By.id("")));
-		type.selectByVisibleText(" ");
+		Select type = new Select(driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[1]/div[1]/div/div/div[1]/div/select")));
+		type.selectByVisibleText("Teacher");
 	}
 
-	@Then("^user can select a particular applicant \\(employer\\)$")
-	public void user_can_select_a_particular_applicant_employer() throws Throwable {
-		driver.findElement(By.id("")).click();
+//	@Then("^user can select a particular applicant \\(employer\\)$")
+//	public void user_can_select_a_particular_applicant_employer() throws Throwable {
+//		driver.findElement(By.id("")).click();
+//	}
+	
+	@Then("^user can delete a particular applicant \\(employer\\)$")
+	public void user_can_delete_a_particular_applicant_employer() throws Throwable {
+		//delete applicant
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[1]/div[4]/div/div/div/div/div[4]/div/i")).click();
 	}
-
+	
 	@Then("^user should be able to select applicant CV to download \\(employer\\)$")
 	public void user_should_be_able_to_select_applicant_CV_to_download_employer() throws Throwable {
-		driver.findElement(By.id("")).click();
+		//select CV
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[1]/div[5]/div/div/div/div/div[3]/div/div/span")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@id=\"exampleModal\"]/div[1]/a[1]")).click();
+		
 	}
 
 }

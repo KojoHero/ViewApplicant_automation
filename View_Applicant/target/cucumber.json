@@ -1,0 +1,123 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6053347400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ViewApplicants_steps.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Verify if business owner can view all job applicants",
+        "description": "",
+        "id": "job-portal;verify-if-business-owner-can-view-all-job-applicants",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8603879700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user logs in (employer)",
+            "match": {
+              "location": "ViewApplicants_steps.user_logs_in_employer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8108155200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks on view applicants (employer)",
+            "match": {
+              "location": "ViewApplicants_steps.user_clicks_on_view_applicants_employer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3090576600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user should be able to filter (employer)",
+            "match": {
+              "location": "ViewApplicants_steps.user_should_be_able_to_filter_employer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 40425200,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 10,
+                "value": "#\t\tAnd user can select a particular applicant (employer)"
+              }
+            ],
+            "line": 11,
+            "name": "user can delete a particular applicant (employer)",
+            "match": {
+              "location": "ViewApplicants_steps.user_can_delete_a_particular_applicant_employer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49777700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user should be able to select applicant CV to download (employer)",
+            "match": {
+              "location": "ViewApplicants_steps.user_should_be_able_to_select_applicant_CV_to_download_employer()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@TEST_COMMUNITY-746"
+          },
+          {
+            "line": 5,
+            "name": "@REQ_COMMUNITY-25"
+          },
+          {
+            "line": 5,
+            "name": "@TESTSET_COMMUNITY-712"
+          }
+        ]
+      }
+    ],
+    "name": "Job portal",
+    "description": "",
+    "id": "job-portal",
+    "keyword": "Feature",
+    "uri": "F:/View_Applicant/View_Applicant/src/test/java/View_Applicant/View_Applicants.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@COMMUNITY-713"
+      },
+      {
+        "line": 2,
+        "name": "@REQ_COMMUNITY-6"
+      }
+    ]
+  }
+]
